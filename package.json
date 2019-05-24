@@ -1,0 +1,41 @@
+{
+  "name": "@juliendargelos/typedoc-theme",
+  "description": "Theme for TypeDoc.",
+  "author": "Julien Dargelos",
+  "version": "0.0.1",
+  "homepage": "https://github.com/juliendargelos/typedoc-theme",
+  "repository": "https://github.com/juliendargelos/typedoc-theme",
+  "bugs": "https://github.com/juliendargelos/typedoc-thele/issues",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "assets",
+    "layouts",
+    "partials",
+    "templates"
+  ],
+  "scripts": {
+    "build": "node-sass src/assets/css/main.sass -o assets/css --source-map true --output-style compressed --importer node_modules/node-sass-package-importer/dist/cli.js",
+    "dev": "concurrently -k -r yarn:watch:* yarn:serve",
+    "docs": "typedoc --out docs --mode modules --module commonjs --theme . demo",
+    "serve": "live-server docs --no-browser --wait=500",
+    "watch:build": "watch 'yarn build' src --interval=0.1",
+    "watch:docs": "watch 'yarn docs' demo assets layouts partials templates --wait=2 --interval=0.1",
+    "prepublish": "yarn build && yarn docs"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "node-sass-package-importer": "^5.3.1",
+    "typedoc": "^0.14.2",
+    "typedoc-default-themes": "TypeStrong/typedoc-default-themes#56a1690",
+    "watch": "^1.0.2"
+  },
+  "keywords": [
+    "typescript",
+    "typedoc",
+    "documentation",
+    "theme"
+  ]
+}

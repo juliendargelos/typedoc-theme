@@ -1,0 +1,22 @@
+.tsd-widget,
+.tsd-select .tsd-select-label,
+.tsd-select .tsd-select-list li
+  &::before
+    vertical-align: middle
+
+.tsd-select .tsd-select-list
+  box-shadow: $BOX_SHADOW_SMALL
+  border-radius: $BORDER_RADIUS
+
+  li
+    &, &:nth-child(even)
+        background-color: $COLOR_PANEL
+
+    &:first-of-type
+      border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0
+
+    &:last-of-type
+      border-radius: 0 0 $BORDER_RADIUS $BORDER_RADIUS
+
+    &:hover
+      background-color: darken($COLOR_BACKGROUND, 2)

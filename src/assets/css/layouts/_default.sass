@@ -1,0 +1,59 @@
+.tsd-page-title
+  padding: 70px 0 20px 0
+  margin: 0 0 40px 0
+  background: $COLOR_PANEL
+  box-shadow: $BOX_SHADOW
+
+  h1
+    margin-top: 10px
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: .15em
+    color: $COLOR_TEXT_ASIDE
+
+  .container
+    display: flex
+    flex-direction: column-reverse
+    align-items: flex-start
+
+.tsd-breadcrumb
+  margin-top: 8px
+  border: 2px solid $COLOR_PANEL_DIVIDER
+    radius: $BORDER_RADIUS_SMALL
+  display: inline-flex
+
+  li
+    display: block
+    position: relative
+    font-size: .85em
+
+    &::after
+      content: ''
+      background-color: $COLOR_PANEL_DIVIDER
+      height: calc(100% + 2px)
+      width: 2px
+      top: -1px
+      right: 0
+      position: absolute
+      transform: rotate(15deg)
+
+    &:last-of-type
+      &::after
+        content: none
+
+      a
+        color: $COLOR_LINK
+
+    a
+      padding: 2px 7px
+      display: block
+
+      &:hover
+        text-decoration: none
+        color: $COLOR_LINK
+
+  li:not(:first-of-type) a
+    padding-left: 8px
+
+  li:not(:last-of-type) a
+    padding-right: 10px
