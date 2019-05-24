@@ -17,7 +17,7 @@
   "scripts": {
     "build": "node-sass src/assets/css/main.sass -o assets/css --source-map true --output-style compressed --importer node_modules/node-sass-package-importer/dist/cli.js",
     "dev": "concurrently -k -r yarn:watch:* yarn:serve",
-    "docs": "typedoc --out docs --mode modules --module commonjs --theme . demo && touch docs/.nojekyll",
+    "docs": "typedoc --out docs --mode modules --module commonjs --theme . demo && touch .nojekyll",
     "serve": "live-server docs --no-browser --wait=500",
     "watch:build": "watch 'yarn build' src --interval=0.1",
     "watch:docs": "watch 'yarn docs' demo assets --wait=2 --interval=0.1",
