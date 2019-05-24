@@ -20,7 +20,7 @@
     "docs": "typedoc --out docs --mode modules --module commonjs --theme . demo",
     "serve": "live-server docs --no-browser --wait=500",
     "watch:build": "watch 'yarn build' src --interval=0.1",
-    "watch:docs": "watch 'yarn docs' demo assets layouts partials templates --wait=2 --interval=0.1",
+    "watch:docs": "watch 'yarn docs' demo assets --wait=2 --interval=0.1",
     "prepublish": "yarn build && yarn docs"
   },
   "devDependencies": {
